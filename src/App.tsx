@@ -1,5 +1,6 @@
 import InlineStyleContainer from './containers/inline-style-container'
 import StyleSheetContainer from './containers/style-sheet-container'
+import WithMemoContainer from './containers/with-memo-container'
 import ThemeProvider from './theme/theme-provider'
 
 function App() {
@@ -12,6 +13,10 @@ function App() {
       <hr />
       <ThemeProvider>
         <StyleSheetContainer />
+      </ThemeProvider>
+      <hr />
+      <ThemeProvider>
+        <WithMemoContainer />
       </ThemeProvider>
     </>
   )

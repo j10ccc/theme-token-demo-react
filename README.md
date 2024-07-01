@@ -16,7 +16,7 @@ function Page() {
 also you can use it with StyleSheet, just like in React Native
 
 ```ts
-const createStyleSheet = () => ({
+const createStyleSheet = () => StyleSheet.create({
   title: {
     color: themeColor.Title
   }
