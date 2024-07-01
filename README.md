@@ -5,11 +5,28 @@ Give a demo: using color token under diverse themes.
 **Example:**
 
 ```tsx
-function Page() {
+function Container() {
+  const { setColorMode } = useColorMode()
+
+  useEffect(() => {
+    // Subscribe device color mode change
+
+    return () => {
+      // Unsubscribe
+    }
+  }, [])
 
   return (
     <h1 style={{ color: themeColor.Title }}>Title</h1>
   )
+}
+
+export default function Page() {
+  return {
+    <ThemeProvider>
+      <Container />
+    </ThemeProvider>
+  }
 }
 ```
 
@@ -32,13 +49,5 @@ function Container() {
   return (
     <h1 style={styleSheet.title}>Title</h1>
   )
-}
-
-export default function Page() {
-  return {
-    <ThemeProvider>
-      <Container />
-    </ThemeProvider>
-  }
 }
 ```
