@@ -9,7 +9,7 @@ const colors: Record<ThemeInstance["mode"], TokenCollection> = {
 }
 
 const themeColor = new Proxy<TokenCollection>(colors[themeInstance.mode], {
-  get: (_, key) => colors[themeInstance.mode][key]
+  get: (_, key: keyof TokenCollection) => colors[themeInstance.mode][key]
 })
 
 export default themeColor
